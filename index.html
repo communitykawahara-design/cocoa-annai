@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ココアのご案内</title>
-<meta name="description" content="ケアマネジャーの皆さまへ。訪問看護ステーション ココアの各ページへの入口です。">
-<meta property="og:title" content="ココアのご案内">
-<meta property="og:description" content="訪問看護ステーション ココアの各ページへの入口です。">
+<meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22%239A3A22%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M20%2014.6H81Q86.2%2014.6%2086.2%2019.8V81.2Q86.2%2086.4%2081%2086.4H20Q15.6%2086.4%2015.6%2082V80Q15.6%2075.4%2020%2075.4H55.5Q64.5%2075.4%2064.5%2066.4V33.4Q64.5%2024.4%2055.5%2024.4H20Q15.6%2024.4%2015.6%2019.8V19Q15.6%2014.6%2020%2014.6Z%22%2F%3E%3Ccircle%20cx%3D%2226.4%22%20cy%3D%2244.5%22%20r%3D%223.4%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2249.8%22%20cy%3D%2244.5%22%20r%3D%223.4%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M19%2054.2Q38.5%2071%2058.4%2054.8%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223.6%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=M+PLUS+Rounded+1c:wght@500;800&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Maru+Gothic:wght@500;700&display=swap">
-<style>body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+<style>body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link id="cocoa-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=M+PLUS+Rounded+1c:wght@500;800&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Maru+Gothic:wght@500;700&display=swap">
+<style id="cocoa-style">
 /* 選ぶ画面は夜空の一枚絵（暗い単一テーマ）。4つの案は、それぞれ明るい単一テーマで色を決め打ちにする。 */
 :root{
   --fx-bg:#0E0B24; --fx-ink:#EEE8FF; --fx-sub:#C3B9E6; --fx-glow:#BFA8FF; --fx-gold:#FFD9A0; --fx-card:rgba(255,255,255,.06); --fx-line:rgba(220,205,255,.22);
@@ -330,12 +331,12 @@ a.dD-tile:hover .dD-ic{animation:hop .6s ease}
   .fx-card,.dA-card,.dA-card::before,.dD-tile,.dD-big,.dC-item,.dC-k{transition:none}
 }
 </style>
-</head>
-<body data-look="A">
-<div id="app"><noscript><ul><li><a href="https://www.kango-cocoa.jp/">訪問看護ステーション ココア</a></li><li><a href="https://www.instagram.com/houkan.cocoa2012/">ココア Instagram</a></li><li><a href="https://www.kango-cocoa.jp/houmoncocoa/all/Lqa_1_1_DUD%2CID/CLoverview.htm">法定研修チャンネル</a></li><li><a href="https://www.kango-cocoa.jp/houmoncocoa/AD0630404235/CDoffice_d.htm">居宅支援総合センター北摂</a></li><li><a href="https://www.kango-cocoa.jp/houmoncocoa/AC0407669659/CDoffice_d.htm">居宅支援総合センター阪神</a></li></ul></noscript></div>
-<script>
+<div id="app"></div>
+<script id="cocoa-state" type="application/json">{"chosen":null,"chosenAt":null}</script>
+<script id="cocoa-main">
 (function(){
 "use strict";
+/* ---------- 内容（リンク先の URL は後で入れる。空なら「準備中」） ---------- */
 var LINKS = [
   {key:"home", icon:"home", tag:"ホームページ", title:"訪問看護ステーション ココア", url:"https://www.kango-cocoa.jp/",
    desc:"訪問看護・訪問リハビリのご案内です。ココアの魅力や事業所の紹介、スタッフインタビュー、よくある質問をご覧いただけます。"},
@@ -354,6 +355,12 @@ var TEXT = {
   lead:"いつもお世話になっております。ココアの各ページへの入口をまとめました。見たいページを選んでください。",
   foot:"リンクを押すと、新しいタブでページが開きます。"
 };
+var DESIGNS = [
+  {id:"A", no:"案1", name:"ココアのぬくもり", note:"やわらかい丸みのある文字と、ココアの色。親しみやすく、温かい雰囲気です。"},
+  {id:"B", no:"案2", name:"すっきり見やすい", note:"読みやすさを考えた文字（UDフォント）で、字を大きめに。上から順に並ぶ、迷わない形です。"},
+  {id:"C", no:"案3", name:"落ち着いた読みもの", note:"明朝体の見出しと、緑がかった静かな色。冊子をめくるような、落ち着いた形です。"},
+  {id:"D", no:"案4", name:"色で選べるタイル", note:"5つのリンクを色分けした大きなタイル。携帯でも押しやすく、ひと目で選べます。"}
+];
 var TITLE = "ココア ご案内リンク";
 var FONT_HREF = "https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=M+PLUS+Rounded+1c:wght@500;800&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Maru+Gothic:wght@500;700&display=swap";
 
@@ -455,10 +462,256 @@ function wire(root){
     if(j){ var row=dB.querySelector('.dB-row[data-key="'+j.getAttribute("data-jump")+'"]'); if(row){ row.scrollIntoView({behavior:"smooth",block:"start"}); row.classList.add("flash"); setTimeout(function(){row.classList.remove("flash");},1400); } }
   });
 }
-var app=document.getElementById("app");
-app.innerHTML=RENDER["A"](true);
-wire(app);
+function designOf(id){for(var i=0;i<DESIGNS.length;i++){if(DESIGNS[i].id===id)return DESIGNS[i];}return null;}
+
+/* ---------- 状態 ---------- */
+var STATE = {chosen:null, chosenAt:null};
+try{ var raw=document.getElementById("cocoa-state"); if(raw) STATE=JSON.parse(raw.textContent)||STATE; }catch(e){}
+var app = document.getElementById("app");
+
+function cap(name){
+  try{ if(window.claude && typeof window.claude.use==="function") return Promise.resolve(window.claude.use(name)).catch(function(){return null;}); }catch(e){}
+  return Promise.resolve(null);
+}
+function ss(get,k,v){try{ if(get) return sessionStorage.getItem(k); if(v===null) sessionStorage.removeItem(k); else sessionStorage.setItem(k,v);}catch(e){} return null;}
+function fmt(iso){try{return new Date(iso).toLocaleString("ja-JP",{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"});}catch(e){return "";}}
+
+/* 自分自身を新しい版として保存するための、ページ全体の組み立て */
+function buildDocument(state){
+  var reset="";
+  var hs=document.head ? document.head.querySelectorAll("style") : [];
+  for(var i=0;i<hs.length;i++){ if(/safe-area-inset/.test(hs[i].textContent)){ reset=hs[i].textContent; break; } }
+  if(!reset) reset=":root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}";
+  var css=document.getElementById("cocoa-style").textContent;
+  var js=document.getElementById("cocoa-main").textContent;
+  var json=JSON.stringify(state).replace(/</g,"\\u003c");
+  var SC="scr"+"ipt";
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+reset+'</style></head><body>'
+   +'<title>'+TITLE+'</title>\n'
+   +'<meta name="claude:viewport-fit-sides" content="cover">\n'
+   +'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link id="cocoa-fonts" rel="stylesheet" href="'+FONT_HREF+'">\n'
+   +'<style id="cocoa-style">'+css+'</style>\n'
+   +'<div id="app"></div>\n'
+   +'<'+SC+' id="cocoa-state" type="application/json">'+json+'</'+SC+'>\n'
+   +'<'+SC+' id="cocoa-main">'+js+'</'+SC+'>\n'
+   +'</body></html>';
+}
+
+function toast(text){
+  var t=document.createElement("div"); t.className="toast"; t.setAttribute("role","status"); t.textContent=text;
+  document.body.appendChild(t); setTimeout(function(){t.remove();},6000);
+}
+
+/* ---------- 決まったあとの画面（ケアマネさんが見る形） ---------- */
+function renderFinal(){
+  var d=designOf(STATE.chosen);
+  document.body.setAttribute("data-look",d.id);
+  app.innerHTML=RENDER[d.id](true);
+  wire(app);
+  var just=ss(true,"cocoa-just");
+  if(just){ ss(false,"cocoa-just",null); toast("ありがとうございました。「"+d.name+"」に決まりました。"); }
+  cap("user").then(function(u){
+    if(!u) return; return u.isOwner().then(function(own){ if(own) ownerBar(d); });
+  });
+}
+function ownerBar(d){
+  var box=document.createElement("div"); box.className="owner";
+  function base(){
+    box.innerHTML='<p>'+esc(d.no)+'「'+esc(d.name)+'」に決まっています'+(STATE.chosenAt?'（'+esc(fmt(STATE.chosenAt))+'）':'')+'。<br><small>この欄は、ページの持ち主だけに見えています。</small></p>'
+     +'<div class="bar-btns"><button class="btn" id="own-reset" type="button">選び直せるように戻す</button><button class="btn" id="own-hide" type="button">閉じる</button></div>';
+    box.querySelector("#own-hide").onclick=function(){box.remove();};
+    box.querySelector("#own-reset").onclick=ask;
+  }
+  function ask(){
+    box.innerHTML='<p>選ぶ画面に戻しますか？ 戻すと、このページを開いた人全員に、選ぶ画面が見えます。</p><div class="bar-btns"><button class="btn main" id="own-yes" type="button">戻す</button><button class="btn" id="own-no" type="button">やめる</button></div><p class="msg" id="own-msg"></p>';
+    box.querySelector("#own-no").onclick=base;
+    box.querySelector("#own-yes").onclick=function(){
+      var b=this; b.disabled=true; b.innerHTML='<span class="spin" aria-hidden="true"></span>戻しています…';
+      cap("db").then(function(db){ if(db){ return db.doc("choice/current").delete().catch(function(){}); } })
+      .then(function(){ return cap("artifact"); })
+      .then(function(art){
+        if(!art) throw {code:"not_granted"};
+        return art.publish(buildDocument({chosen:null,chosenAt:null}));
+      }).catch(function(e){
+        if(e && e.code==="conflict"){ box.querySelector("#own-msg").textContent="ほかで先に変更がありました。読み込み直しています…"; return; }
+        b.disabled=false; b.textContent="戻す";
+        box.querySelector("#own-msg").textContent="戻せませんでした（"+((e&&e.code)||"不明")+"）。少し待ってから、もう一度押してください。";
+      });
+    };
+  }
+  base(); document.body.appendChild(box);
+}
+
+/* ---------- 選ぶ画面（幻想的） ---------- */
+function chars(text, delay, step){
+  var out=""; var arr=Array.from(text);
+  for(var i=0;i<arr.length;i++){ out+='<span class="ch" style="--i:'+i+';--d:'+delay+'ms">'+(arr[i]===" "?"&nbsp;":esc(arr[i]))+'</span>'; }
+  return out;
+}
+var sky=null;
+function renderSelect(){
+  document.body.removeAttribute("data-look");
+  var l1="不動さん", l2="お疲れ様です。", l3="デザインを決めてください。";
+  var html='<div class="fx"><canvas id="sky" aria-hidden="true"></canvas><main class="fx-main">'
+   +'<h1 class="fx-msg"><span class="sr">'+esc(l1+" "+l2+" "+l3)+'</span>'
+   +'<span class="ln fx-l1" aria-hidden="true">'+chars(l1,300)+'</span>'
+   +'<span class="ln fx-l2" aria-hidden="true">'+chars(l2,1300)+'</span>'
+   +'<span class="ln fx-l3" aria-hidden="true">'+chars(l3,2300)+'</span></h1>'
+   +'<p class="fx-lead later" style="--d:3.4s">ケアマネジャーの皆さまに向けた、ご案内のページのデザインを4つ用意しました。気になる案を大きく開いて見比べてから、1つ選んでください。選んだ案が、このページのデザインとしてずっと使われます。</p>'
+   +'<div id="fx-banner"></div>'
+   +'<ul class="fx-grid">'+DESIGNS.map(function(d,i){
+      return '<li class="fx-card later" style="--d:'+(3.8+i*0.25)+'s" data-id="'+d.id+'"><div class="th" aria-hidden="true"><div class="th-in">'+RENDER[d.id](false)+'</div></div>'
+       +'<div class="fx-meta"><span class="fx-no">'+esc(d.no)+'</span><h2 class="fx-name">'+esc(d.name)+'</h2><p class="fx-note">'+esc(d.note)+'</p></div>'
+       +'<button class="fx-open" type="button" data-open="'+d.id+'">'+esc(d.no)+'を大きく見る</button></li>';
+   }).join("")+'</ul>'
+   +'<p class="fx-foot later" style="--d:4.8s">大きく見た画面では、リンクを押すと実際のページが新しいタブで開きます。</p>'
+   +'</main></div>';
+  app.innerHTML=html;
+  fitThumbs();
+  app.querySelectorAll("[data-open]").forEach(function(b){ b.addEventListener("click",function(){ openPreview(b.getAttribute("data-open"), b); }); });
+  sky=startSky();
+  checkRecorded();
+}
+function fitThumbs(){
+  var ths=app.querySelectorAll(".th");
+  function fit(){ ths.forEach(function(th){ var w=th.clientWidth; if(w) th.firstChild.style.setProperty("--s",(w/1100).toFixed(4)); }); }
+  fit();
+  if(window.ResizeObserver){ var ro=new ResizeObserver(fit); ths.forEach(function(t){ro.observe(t);}); } else { window.addEventListener("resize",fit); }
+}
+
+/* 権限がなくて記録だけされた選択があれば、持ち主に確定のボタンを出す */
+function checkRecorded(){
+  cap("db").then(function(db){
+    if(!db) return;
+    return db.doc("choice/current").get().then(function(s){
+      if(!s.exists) return;
+      var d=designOf((s.data()||{}).design); if(!d) return;
+      return cap("user").then(function(u){ return u ? u.canEdit() : false; }).then(function(can){
+        var box=document.getElementById("fx-banner"); if(!box) return;
+        if(can){
+          box.innerHTML='<div class="fx-banner"><span>'+esc(d.no)+'「'+esc(d.name)+'」が選ばれて、記録されています。</span><button class="btn main" type="button" id="fix-rec">この案で決める</button><p class="msg" id="fix-msg"></p></div>';
+          box.querySelector("#fix-rec").onclick=function(){ commit(d.id, this, box.querySelector("#fix-msg")); };
+        } else {
+          box.innerHTML='<div class="fx-banner">'+esc(d.no)+'「'+esc(d.name)+'」が選ばれて、記録されています。ページの持ち主が確定すると、このデザインに変わります。</div>';
+        }
+      });
+    });
+  }).catch(function(){});
+}
+
+var lastFocus=null;
+function openPreview(id, from){
+  var d=designOf(id); lastFocus=from||null;
+  var pv=document.createElement("div"); pv.className="pv "+id; pv.id="pv";
+  pv.setAttribute("role","dialog"); pv.setAttribute("aria-modal","true"); pv.setAttribute("aria-label",d.no+"「"+d.name+"」の見本");
+  pv.innerHTML=RENDER[id](true);
+  wire(pv);
+  var bar=document.createElement("div"); bar.className="bar"; bar.id="pv-bar";
+  document.body.appendChild(pv); document.body.appendChild(bar);
+  document.documentElement.classList.add("lock");
+  if(sky) sky.pause(true);
+  barView(d, bar);
+  document.addEventListener("keydown", onKey);
+}
+function onKey(e){ if(e.key==="Escape") closePreview(); }
+function closePreview(){
+  var pv=document.getElementById("pv"), bar=document.getElementById("pv-bar");
+  if(pv) pv.remove(); if(bar) bar.remove();
+  document.documentElement.classList.remove("lock");
+  document.removeEventListener("keydown", onKey);
+  if(sky) sky.pause(false);
+  if(lastFocus) lastFocus.focus();
+}
+function barView(d, bar){
+  bar.innerHTML='<div class="bar-in"><p class="bar-txt"><b>'+esc(d.no)+'「'+esc(d.name)+'」</b>を見ています。上下に動かして、全体をご覧ください。</p>'
+   +'<div class="bar-btns"><button class="btn" type="button" id="pv-back">ほかの案を見る</button><button class="btn main" type="button" id="pv-pick">この案に決める</button></div></div>';
+  bar.querySelector("#pv-back").onclick=closePreview;
+  bar.querySelector("#pv-pick").onclick=function(){ confirmView(d, bar); };
+  bar.querySelector("#pv-pick").focus();
+}
+function confirmView(d, bar){
+  bar.innerHTML='<div class="bar-in"><p class="bar-txt"><b>'+esc(d.no)+'「'+esc(d.name)+'」</b>に決めますか？ 決めたあと、このページはこの案のデザインになります。</p>'
+   +'<div class="bar-btns"><button class="btn" type="button" id="pv-no">やめる</button><button class="btn main" type="button" id="pv-yes">決める</button></div><p class="msg" id="pv-msg" role="status"></p></div>';
+  bar.querySelector("#pv-no").onclick=function(){ barView(d, bar); };
+  bar.querySelector("#pv-yes").onclick=function(){ commit(d.id, this, bar.querySelector("#pv-msg"), bar.querySelector("#pv-no")); };
+  bar.querySelector("#pv-yes").focus();
+}
+
+var READONLY=["not_writer","not_granted","capability_disabled","capability_removed","consent_required","not_declared"];
+function commit(id, btn, msg, other){
+  var d=designOf(id);
+  btn.disabled=true; if(other) other.disabled=true;
+  btn.innerHTML='<span class="spin" aria-hidden="true"></span>保存しています…';
+  msg.textContent="";
+  var at=new Date().toISOString();
+  ss(false,"cocoa-just",id);
+  function done(text){ msg.textContent=text; }
+  function fail(text){ ss(false,"cocoa-just",null); btn.disabled=false; if(other) other.disabled=false; btn.textContent="決める"; msg.textContent=text; }
+  function record(){
+    return cap("db").then(function(db){
+      if(!db) return false;
+      return db.doc("choice/current").set({design:id, at:at}).then(function(){return true;},function(){return false;});
+    });
+  }
+  function publish(art, retried){
+    return art.publish(buildDocument({chosen:id, chosenAt:at})).then(function(){
+      done("保存しました。ページを読み込み直しています…");
+    }, function(e){
+      var code=e&&e.code;
+      if(code==="conflict"){ done("ほかで先に変更がありました。ページを読み込み直しています…"); return; }
+      if(code==="upstream_error" && !retried){ return new Promise(function(r){setTimeout(r,800+Math.random()*700);}).then(function(){return publish(art,true);}); }
+      if(READONLY.indexOf(code)>=0){ return fallback(); }
+      fail("保存できませんでした（"+(code||"不明")+"）。少し待ってから、もう一度「決める」を押してください。");
+    });
+  }
+  function fallback(){
+    return record().then(function(ok){
+      ss(false,"cocoa-just",null);
+      btn.innerHTML="記録しました";
+      if(ok) done("選んだ案を記録しました。このページを書きかえる権限がないため、ページの持ち主が確定すると、このデザインに変わります。");
+      else { btn.textContent="選びました"; done("ありがとうございます。「"+d.no+" "+d.name+"」を選びました。お手数ですが、この案に決めたことを、ページを送った人に伝えてください。そのあと、このページがこの案のデザインに変わります。"); }
+    });
+  }
+  record().then(function(){ return cap("artifact"); }).then(function(art){
+    if(!art) return fallback();
+    return publish(art,false);
+  }).catch(function(){ fail("保存できませんでした。少し待ってから、もう一度押してください。"); });
+}
+
+/* 夜空の光の粒 */
+function startSky(){
+  var c=document.getElementById("sky"); if(!c||!c.getContext) return null;
+  var ctx=c.getContext("2d"), w=0, h=0, paused=false;
+  var reduce=window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cols=[[205,185,255],[255,218,160],[160,220,255],[255,180,225]];
+  var P=[], S=[], i;
+  function size(){ var dpr=Math.min(2,window.devicePixelRatio||1); w=innerWidth; h=innerHeight; c.width=w*dpr; c.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+  function mk(any,k){ return {x:Math.random()*w, y:any?Math.random()*h:h+20, r:1.5+Math.random()*6, vy:.12+Math.random()*.4, sw:Math.random()*6.28, ss:.004+Math.random()*.01, a:.25+Math.random()*.5, c:cols[k%4]}; }
+  size(); window.addEventListener("resize",size);
+  for(i=0;i<70;i++) P.push(mk(true,i));
+  for(i=0;i<140;i++) S.push({x:Math.random(), y:Math.random(), r:.3+Math.random()*1.1, t:Math.random()*6.28, s:.4+Math.random()*1.6});
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    for(var j=0;j<S.length;j++){ var s=S[j]; var a=.25+.6*(.5+.5*Math.sin(t*.001*s.s+s.t)); ctx.fillStyle="rgba(235,228,255,"+a.toFixed(3)+")"; ctx.beginPath(); ctx.arc(s.x*w, s.y*h, s.r, 0, 6.283); ctx.fill(); }
+    ctx.globalCompositeOperation="lighter";
+    for(var k=0;k<P.length;k++){
+      var p=P[k]; var x=p.x+Math.sin(p.sw)*14, g=ctx.createRadialGradient(x,p.y,0,x,p.y,p.r*4);
+      var tw=p.a*(.7+.3*Math.sin(t*.002+k));
+      g.addColorStop(0,"rgba("+p.c[0]+","+p.c[1]+","+p.c[2]+","+tw.toFixed(3)+")"); g.addColorStop(1,"rgba("+p.c[0]+","+p.c[1]+","+p.c[2]+",0)");
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,p.y,p.r*4,0,6.283); ctx.fill();
+      if(!reduce){ p.y-=p.vy; p.sw+=p.ss; if(p.y<-30) P[k]=mk(false,k); }
+    }
+    ctx.globalCompositeOperation="source-over";
+  }
+  function frame(t){ if(!paused && document.getElementById("sky")===c) draw(t); if(document.getElementById("sky")===c) requestAnimationFrame(frame); }
+  if(reduce) draw(0); else requestAnimationFrame(frame);
+  return {pause:function(v){paused=v;}};
+}
+
+/* ---------- はじめ ---------- */
+if(STATE.chosen && designOf(STATE.chosen)) renderFinal(); else renderSelect();
 })();
 </script>
+
 </body>
 </html>
